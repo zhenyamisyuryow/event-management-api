@@ -20,6 +20,8 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
+# Specify the user model
+AUTH_USER_MODEL = 'user_auth.User'
 
 # Application definition
 
@@ -32,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
+    'user_auth',
 ]
 
 MIDDLEWARE = [
