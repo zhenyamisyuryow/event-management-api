@@ -17,36 +17,34 @@ Event Manager Api is a RESTful API built with Django Rest Framework that allows 
     git clone https://github.com/zhenyamisyuryow/event-management-api
     ```
 
-2. Install and activate virtual environment:
+2. Install and activate the virtual environment:
 
-    ```
+    ```bash
+    # Create a virtual environment
     python3 -m venv .env
-    ```
-    For Windows:
-    ```
-    .env\Scripts\activate
-    ```
 
-    For MacOS/Linux:
-    ```
-    source venv/bin/activate
+    # For Windows:
+    .env\Scripts\activate
+
+    # For MacOS/Linux:
+    source .env/bin/activate
     ```
 
 3. Install dependencies:
 
-    ```
+    ````bash
     pip install -r requirements.txt
     ```
 
 4. Apply database migrations:
 
-    ```
+    ```bash
     python3 manage.py migrate
     ```
 
 5. Start the development server:
 
-    ```
+    ```bash
     python3 manage.py runserver
     ```
 
@@ -100,6 +98,10 @@ This API allows users to manage events and subscriptions.
   - **List All Events**
     - Method: GET
     - URL: `http://localhost:8000/api/v1/events`
+    
+  - **List Events By User**
+    - Method: GET
+    - URL: `http://localhost:8000/api/v1/events/list_my_events`
 
   - **Get Event Details**
     - Method: GET
@@ -145,9 +147,6 @@ This API allows users to manage events and subscriptions.
     - Method: DELETE
     - URL: `http://localhost:8000/api/v1/events/{event_id}/`
 
-  - **List Events By User**
-    - Method: GET
-    - URL: `http://localhost:8000/api/v1/events/list_my_events`
 
 #### Event Subscriptions
 
