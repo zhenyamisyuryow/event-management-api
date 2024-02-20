@@ -26,6 +26,7 @@ class Attendee(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='events_attending')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    initial_notification_sent = models.BooleanField(default=False)
 
     class Meta:
         unique_together = ('event', 'user')

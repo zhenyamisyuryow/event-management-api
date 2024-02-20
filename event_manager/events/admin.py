@@ -11,7 +11,7 @@ class EventAdmin(ModelAdmin):
 admin.site.register(Event, EventAdmin)
 
 class AttendeeAdmin(ModelAdmin):
-    list_display = ['event', 'user']
+    list_display = ['event', 'user', 'initial_notification_sent']
     search_fields = ['event__title', 'user__email']
     list_filter = ['event__title', 'user__email']
 
